@@ -1,1 +1,1 @@
-export class CreateAvailability-slotDto {}
+export class CreateAvailabilitySlotDto {}

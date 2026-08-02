@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateAvailability-slotDto } from './dto/create-availability-slot.dto';
-import { UpdateAvailability-slotDto } from './dto/update-availability-slot.dto';
+import { CreateAvailabilitySlotDto } from './dto/create-availability-slot.dto';
+import { UpdateAvailabilitySlotDto } from './dto/update-availability-slot.dto';
 
 @Injectable()
 export class AvailabilityService {
@@ -12,11 +12,11 @@ export class AvailabilityService {
     return { id };
   }
 
-  create(dto: CreateAvailability-slotDto) {
+  create(dto: CreateAvailabilitySlotDto) {
     return dto;
   }
 
-  update(id: string, dto: UpdateAvailability-slotDto) {
+  update(id: string, dto: UpdateAvailabilitySlotDto) {
     return { id, ...dto };
   }
 

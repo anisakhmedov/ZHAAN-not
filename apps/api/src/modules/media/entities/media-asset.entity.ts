@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity('media')
-export class Media-asset {
+export class MediaAsset {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

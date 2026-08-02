@@ -1,34 +1,34 @@
 import { Controller, Get, Post, Body, Param, Patch, Delete } from '@nestjs/common';
 import { AvailabilityService } from './availability.service';
-import { CreateAvailability-slotDto } from './dto/create-availability-slot.dto';
-import { UpdateAvailability-slotDto } from './dto/update-availability-slot.dto';
+import { CreateAvailabilitySlotDto } from './dto/create-availability-slot.dto';
+import { UpdateAvailabilitySlotDto } from './dto/update-availability-slot.dto';
 
 @Controller('availability')
 export class AvailabilityController {
-  constructor(private readonly availability-slotService: AvailabilityService) {}
+  constructor(private readonly availabilityService: AvailabilityService) {}
 
   @Get()
   findAll() {
-    return this.availability-slotService.findAll();
+    return this.availabilityService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.availability-slotService.findOne(id);
+    return this.availabilityService.findOne(id);
   }
 
   @Post()
-  create(@Body() dto: CreateAvailability-slotDto) {
-    return this.availability-slotService.create(dto);
+  create(@Body() dto: CreateAvailabilitySlotDto) {
+    return this.availabilityService.create(dto);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() dto: UpdateAvailability-slotDto) {
-    return this.availability-slotService.update(id, dto);
+  update(@Param('id') id: string, @Body() dto: UpdateAvailabilitySlotDto) {
+    return this.availabilityService.update(id, dto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.availability-slotService.remove(id);
+    return this.availabilityService.remove(id);
   }
 }

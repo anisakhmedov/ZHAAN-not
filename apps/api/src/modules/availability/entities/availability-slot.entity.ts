@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity('availability')
-export class Availability-slot {
+export class AvailabilitySlot {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

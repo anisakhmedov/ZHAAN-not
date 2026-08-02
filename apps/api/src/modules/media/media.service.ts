@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateMedia-assetDto } from './dto/create-media-asset.dto';
-import { UpdateMedia-assetDto } from './dto/update-media-asset.dto';
+import { CreateMediaAssetDto } from './dto/create-media-asset.dto';
+import { UpdateMediaAssetDto } from './dto/update-media-asset.dto';
 
 @Injectable()
 export class MediaService {
@@ -12,11 +12,11 @@ export class MediaService {
     return { id };
   }
 
-  create(dto: CreateMedia-assetDto) {
+  create(dto: CreateMediaAssetDto) {
     return dto;
   }
 
-  update(id: string, dto: UpdateMedia-assetDto) {
+  update(id: string, dto: UpdateMediaAssetDto) {
     return { id, ...dto };
   }
 

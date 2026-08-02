@@ -1,1 +1,1 @@
-export class CreateMedia-assetDto {}
+export class CreateMediaAssetDto {}
