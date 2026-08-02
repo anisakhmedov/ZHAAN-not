@@ -1,9 +1,5 @@
-// Detail page for a single salon and its booking flow entry point, e.g. /salons/[id]
+import { ListingDetailPage } from '@/components/category/listing-detail-page';
+
 export default function SalonsDetailPage({ params }: { params: { id: string } }) {
-  return (
-    <div>
-      <h1>Salons #{params.id}</h1>
-      {/* Details, availability calendar, "Book now" -> /booking/[id] */}
-    </div>
-  );
+  return <ListingDetailPage category="salons" id={params.id} />;
 }

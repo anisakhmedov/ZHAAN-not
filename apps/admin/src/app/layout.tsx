@@ -1,21 +1,25 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
-import { AdminSidebar } from '@/components/layout/admin-sidebar';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: 'Zhaan Admin',
+  title: {
+    default: 'Zhaan Admin',
+    template: '%s · Zhaan Admin',
+  },
   description: 'Operations dashboard for the Zhaan booking ecosystem',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <div style={{ display: 'flex' }}>
-          <AdminSidebar />
-          <main style={{ flex: 1 }}>{children}</main>
-        </div>
-      </body>
+    <html lang="en" className={inter.variable}>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }

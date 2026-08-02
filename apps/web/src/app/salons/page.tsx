@@ -1,12 +1,5 @@
-import { SearchBar } from '@/components/search/search-bar';
+import { CategoryListingPage } from '@/components/category/category-listing-page';
 
-// Listing page for salons, e.g. /salons?location=...
-export default function SalonsListPage() {
-  return (
-    <div>
-      <h1>Salons</h1>
-      <SearchBar />
-      {/* Results grid populated from GET /api/salons */}
-    </div>
-  );
+export default function SalonsPage() {
+  return <CategoryListingPage category="salons" />;
 }

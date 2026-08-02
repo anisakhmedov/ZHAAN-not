@@ -1,8 +1,8 @@
-// Customer account: favorites
+import { ListingGrid } from '@/components/category/listing-grid';
+import { LISTINGS } from '@/lib/mock-listings';
+
 export default function AccountFavoritesPage() {
-  return (
-    <div>
-      <h1>My Favorites</h1>
-    </div>
-  );
+  const favorites = LISTINGS.filter((l) => ['h2', 's2', 'r1', 'f3'].includes(l.id));
+
+  return <ListingGrid listings={favorites} />;
 }

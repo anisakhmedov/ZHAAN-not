@@ -1,30 +1,26 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { HomeScreen } from '../screens/Home/HomeScreen';
-import { SearchScreen } from '../screens/Search/SearchScreen';
+import { TabNavigator } from './TabNavigator';
 import { BookingScreen } from '../screens/Booking/BookingScreen';
-import { AccountScreen } from '../screens/Account/AccountScreen';
 import { LoginScreen } from '../screens/Auth/LoginScreen';
-
-export type RootStackParamList = {
-  Home: undefined;
-  Search: undefined;
-  Booking: { listingId: string };
-  Account: undefined;
-  Login: undefined;
-};
+import { colors } from '../theme';
+import type { RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export function AppNavigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Search" component={SearchScreen} />
-        <Stack.Screen name="Booking" component={BookingScreen} />
-        <Stack.Screen name="Account" component={AccountScreen} />
-        <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Navigator
+        screenOptions={{
+          headerShadowVisible: false,
+          headerTitleStyle: { fontWeight: '700', color: colors.ink[900] },
+          headerStyle: { backgroundColor: colors.white },
+        }}
+      >
+        <Stack.Screen name="Tabs" component={TabNavigator} options={{ headerShown: false }} />
+        <Stack.Screen name="Booking" component={BookingScreen} options={{ title: 'Book now' }} />
+        <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Log in', presentation: 'modal' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
