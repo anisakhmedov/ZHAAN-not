@@ -10,7 +10,6 @@ import {
   FlightIcon,
   GridIcon,
   HotelIcon,
-  LogOutIcon,
   RentalIcon,
   SalonIcon,
   SettingsIcon,
@@ -100,13 +99,6 @@ export function AdminSidebar({ onNavigate }: { onNavigate?: () => void }) {
         >
           <SettingsIcon className="h-4 w-4" />
           Settings
-        </Link>
-        <Link
-          href="/login"
-          className="focus-ring flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-ink-300 hover:bg-white/5 hover:text-white"
-        >
-          <LogOutIcon className="h-4 w-4" />
-          Log out
         </Link>
       </div>
     </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import { BellIcon, MenuIcon, SearchIcon, UsersIcon } from '@/components/icons';
 
 export function AdminTopbar({ onMenuClick }: { onMenuClick?: () => void }) {
@@ -35,7 +37,7 @@ export function AdminTopbar({ onMenuClick }: { onMenuClick?: () => void }) {
             <UsersIcon className="h-4 w-4" />
           </span>
           <div className="hidden sm:block">
-            <p className="text-sm font-medium text-ink-900">Alex Morgan</p>
+            <p className="text-sm font-medium text-ink-900">Admin</p>
             <p className="text-xs text-ink-500">Operations admin</p>
           </div>
         </div>

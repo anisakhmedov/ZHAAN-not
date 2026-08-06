@@ -17,7 +17,8 @@
     "@zhaan/ui": "workspace:*",
     "@zhaan/types": "workspace:*",
     "@zhaan/utils": "workspace:*",
-    "@zhaan/api-client": "workspace:*"
+    "@zhaan/api-client": "workspace:*",
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
